@@ -347,3 +347,6 @@ Mantém a conexão com o banco de dados gerenciada pela ConnectionFactory.
         -   Maior testabilidade: As classes com responsabilidades únicas serão mais fáceis de testar, aumentando a confiabilidade do código.
         -   Maior qualidade do código: A aplicação dos padrões e princípios resultará em um código mais limpo, organizado e fácil de manter, aumentando a qualidade geral do software.
     ---
+
+### Link para o diagrama
+ - https://drive.google.com/file/d/12MWWS1LrXjfmnduQxeVPBKHIpb6f8NdO/view?usp=drivesdk
