@@ -271,8 +271,6 @@ public class ClientesDAO implements IClienteRepository {
 
 - Implementa a interface  IClienteRepository, assumindo a responsabilidade de realizar operações no banco de dados relacionadas à entidade "Clientes".
 - Mantém a lógica específica de acesso a dados, como cadastrar clientes, alterar, excluir, listar, consultar por nome, buscar por CPF, buscar cliente por nome e buscar por CEP.
-- Utiliza PreparedStatement para prevenir SQL Injection no método cadastrarCliente.
-Mantém a conexão com o banco de dados gerenciada pela ConnectionFactory.
 
 -------------------------------
 ------------------------------
