@@ -115,11 +115,9 @@ public class ClientesDAO {
 
 ### 
 
-- Interface IClienteRepository: Mantém a definição dos métodos relacionados ao acesso a dados.
-- Agora estabelece um contrato para as operações básicas como cadastrar, alterar, excluir, listar, consultar por nome, buscar por CPF, buscar cliente por nome e buscar por CEP.
-
 ------------
 ```IClienteRepository```
+
 ```Java
 package br.com.projeto.repository;
 
@@ -141,16 +139,11 @@ public interface IClienteRepository {
 
 ```
 
-- Atua como um controlador intermediário entre a interface do usuário (ou outros sistemas) e o acesso a dados para clientes.
-  
-- Recebe instância de IClienteRepository no construtor, aplicando o princípio de Inversão de Dependência.
-  
-- Gerencia exceções provenientes das operações do DAO, proporcionando maior robustez.
-Delega chamadas aos métodos apropriados da interface IClienteRepository.
-
+- Interface IClienteRepository: Mantém a definição dos métodos relacionados ao acesso a dados.
+- Agora estabelece um contrato para as operações básicas como cadastrar, alterar, excluir, listar, consultar por nome, buscar por CPF, buscar cliente por nome e buscar por CEP.
 
 ------------
-```IClienteRepository```
+```ClienteController```
 ```Java
 // ClienteController.java
 package br.com.projeto.controller;
@@ -237,10 +230,12 @@ public class ClienteController {
 
 ```
 
-- Implementa a interface  IClienteRepository, assumindo a responsabilidade de realizar operações no banco de dados relacionadas à entidade "Clientes".
-- Mantém a lógica específica de acesso a dados, como cadastrar clientes, alterar, excluir, listar, consultar por nome, buscar por CPF, buscar cliente por nome e buscar por CEP.
-- Utiliza PreparedStatement para prevenir SQL Injection no método cadastrarCliente.
-Mantém a conexão com o banco de dados gerenciada pela ConnectionFactory.
+- Atua como um controlador intermediário entre a interface do usuário (ou outros sistemas) e o acesso a dados para clientes.
+
+- Recebe instância de IClienteRepository no construtor, aplicando o princípio de Inversão de Dependência.
+
+- Gerencia exceções provenientes das operações do DAO, proporcionando maior robustez.
+Delega chamadas aos métodos apropriados da interface IClienteRepository
 
 
 ------------
@@ -273,6 +268,11 @@ public class ClientesDAO implements IClienteRepository {
 }
 
 ```
+
+- Implementa a interface  IClienteRepository, assumindo a responsabilidade de realizar operações no banco de dados relacionadas à entidade "Clientes".
+- Mantém a lógica específica de acesso a dados, como cadastrar clientes, alterar, excluir, listar, consultar por nome, buscar por CPF, buscar cliente por nome e buscar por CEP.
+- Utiliza PreparedStatement para prevenir SQL Injection no método cadastrarCliente.
+Mantém a conexão com o banco de dados gerenciada pela ConnectionFactory.
 
 -------------------------------
 ------------------------------
